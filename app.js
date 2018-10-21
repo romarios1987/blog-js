@@ -1,9 +1,19 @@
 // connection express
 const express = require('express');
 
+const mongoose = require('mongoose');
+
 const path = require('path');
+const keys = require('./keys')
 
 const frontendPath = path.join(__dirname, 'frontend');
+
+mongoose.connect(keys.mongoURI)
+
+  // if connect - Ok
+  .then(() => console.log('MongoDb connect'))
+  // if connect - NOT
+  .catch(err => console.error(err))
 
 const port = process.env.PORT || 5000;
 
