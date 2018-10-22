@@ -5,6 +5,9 @@ const express = require('express')
 const mongoose = require('mongoose')
 
 const path = require('path');
+
+const postRouter = require('./routes/post')
+
 const keys = require('./keys')
 
 const frontendPath = path.join(__dirname, 'frontend');
@@ -21,6 +24,7 @@ const port = process.env.PORT || 5000;
 
 // create object express
 const app = express();
+app.use('/api/post', postRouter)
 
 app.use(express.static(frontendPath));
 
