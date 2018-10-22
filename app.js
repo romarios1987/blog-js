@@ -1,7 +1,8 @@
 // connection express
-const express = require('express');
+const express = require('express')
 
-const mongoose = require('mongoose');
+// connection mongoose
+const mongoose = require('mongoose')
 
 const path = require('path');
 const keys = require('./keys')
@@ -10,6 +11,7 @@ const frontendPath = path.join(__dirname, 'frontend');
 
 mongoose.connect(keys.mongoURI)
 
+  //promise
   // if connect - Ok
   .then(() => console.log('MongoDb connect'))
   // if connect - NOT
