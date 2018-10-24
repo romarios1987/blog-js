@@ -1,10 +1,10 @@
 // connection express
-const express = require('express')
+const express = require('express');
 
 // connection mongoose
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 
 const path = require('path');
 
