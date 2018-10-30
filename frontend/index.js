@@ -108,7 +108,7 @@ function onDeletePost(event) {
         const decision = confirm('Вы уверены, что хотите удалить пост?');
 
         if (decision) {
-            const id = event.target.getAttribute('data-id';
+            const id = event.target.getAttribute('data-id');
 
             PostApi.remove(id).then(() => {
                 const postIndex = posts.findIndex(post => post._id === id);
