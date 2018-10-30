@@ -1,2 +1,4 @@
 # blog-js
-Create a simple javascript blog
+Creating a simple javascript blog using Node.js, Express, MongoDB
+
+
