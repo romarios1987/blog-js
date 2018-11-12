@@ -1,20 +1,12 @@
-// connection express
 const express = require('express');
-
-// connection mongoose
 const mongoose = require('mongoose');
-
 const bodyParser = require('body-parser');
-
 const path = require('path');
-
 const postRouter = require('./routes/post');
-
 const keys = require('./keys');
-
 const frontendPath = path.join(__dirname, 'frontend');
 
-mongoose.connect(keys.mongoURI)
+mongoose.connect(keys.mongoURI, {useNewUrlParser: true})
 
 //promise
 // if connect - Ok

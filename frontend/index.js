@@ -75,7 +75,7 @@ function renderPosts(_posts = []) {
     if (_posts.length > 0) {
         $posts.innerHTML = _posts.map(post => card(post)).join(' ');
     } else {
-        $posts.innerHTML = `<div class="center">Постов пока нет</div>`;
+        $posts.innerHTML = `<h1 class="center">Постов пока нет</h1>`;
     }
 }
 
